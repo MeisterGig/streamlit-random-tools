@@ -39,13 +39,3 @@ jobs:
             $(cat CHANGELOG.md)
           draft: false
           prerelease: false
-
-      - name: Upload Docker image to release
-        uses: docker/upload-action@v2
-        with:
-          name: my-image
-          path: ./path/to/my-image.tar.gz
-          token: ${{ secrets.GITHUB_TOKEN }}
-          registry: ghcr.io
-          repository: ${{ github.repository }}
-          tags: ${{ github.ref }}
