@@ -12,9 +12,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Generate changelog
-        uses: github-changelog-generator/action@v1.6.0
+      - name: "✏️ Generate release changelog"
+        uses: heinrichreimer/github-changelog-generator-action@v2.3
         with:
+          token: ${{ secrets.GITHUB_TOKEN }} 
           output: CHANGELOG.md
 
       - name: Set up Docker Buildx
