@@ -3,6 +3,8 @@
 
 This is a collection of random tools created in python using streamlit.
 
+[![Try it out](https://img.shields.io/badge/Try%20it%20out-red)](https://random-tools.streamlit.app)
+
 ## Installation
 
 Install it using docker

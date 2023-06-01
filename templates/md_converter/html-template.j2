@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title | string }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <style>
+      {{ css | string | indent(6) }}
+    </style>
+  </head>
+  <body>
+  {{ content | string | indent(4) }}
+  </body>
+</html>
