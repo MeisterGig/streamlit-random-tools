@@ -83,6 +83,9 @@ with st.expander("Examples"):
 if st.button("Render"):
     try:
         st.graphviz_chart(st.session_state.graph)
+    except Exception as e:
+        st.error(e)
+    try:
         st.download_button(
             label="Download Image",
             data=graphviz.Source(st.session_state.graph).pipe(format="png"),
@@ -90,4 +93,4 @@ if st.button("Render"):
             mime="image/png"
         )
     except Exception as e:
-        st.error(e)
+        print(e)
